@@ -1,0 +1,35 @@
+.btn{
+  display:block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  text-decoration: none;
+  cursor:pointer;
+}
+
+.social-icon{
+	width:$socialIconSize*0.875;
+	height:$socialIconSize;
+	margin-right:10px;
+	&:link, &:visited, &:active{
+		
+	}
+	&:hover{
+		filter:brightness(0.5);
+	}
+}
+
+.fb-icon{
+	background-image:url('../images/facebook-square-brands.svg');
+}
+
+.ig-icon{
+	background-image:url('../images/instagram-brands.svg');
+}
+
+.info-icon{
+	width:$infoIconSize;
+	height:auto;
+	margin-right:20px;
+}

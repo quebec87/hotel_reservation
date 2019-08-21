@@ -1,0 +1,125 @@
+body{
+	font-family: 'Noto Sans TC', sans-serif;
+	color:$black;
+	font-size:14px;
+	position:relative;
+}
+
+main{
+	position:relative;
+}
+
+h1{
+	font-size:2.25em; //36
+}
+h2{
+	font-size:1.875em; //30
+}
+h3{
+	font-size:1.313em; //21
+	span.small{
+		font-size:0.65em;
+		color:$small-light-gray;
+	}
+}
+h4{
+	font-size:1em; //16
+}
+.small{
+	font-size:0.875em; //14
+	color:$small-light-gray;
+}
+
+.logo{
+	position:absolute;
+	top:calc(40vh - #{$logoSize}*0.5);
+	left:calc(50vw - #{$logoSize}*0.5);
+	z-index:$homeInfoIndex;
+	img{
+		display:block;
+	}
+}
+
+.home-info-pane{
+	color:$white;
+	position:absolute;
+	z-index:$homeInfoIndex;
+	top:calc(40vh + #{$logoSize}*0.75);
+	left:calc(50vw - #{$logoSize}*0.5 - 100px);
+	@include flexbox(row, center, flex-start);
+	.social-icons{
+		width:100px;
+		position:relative;
+		padding-right:20px;
+		@include flexbox(row, center, flex-end);
+	}
+	.home-info{
+		position:relative;
+		border-left:1px solid $white;
+		padding-left:20px;
+		li{
+			@include flexbox(row, center, flex-start);
+			padding-bottom:15px;
+			a{
+				&:link, &:visited, &:active{
+					color:$white;
+				}
+				&:hover{
+					color:$dark-gray;
+				}
+				font-weight:300;
+			}	
+		}
+	}
+}
+
+section{
+	position:absolute;
+	z-index:$sectionIndex;
+	margin-top:-10vh;
+}
+
+.rooms-pane{
+	width:80vw;
+	margin-left:10vw;
+	position:relative;
+	@include flexbox(row, flex-start, space-between);
+	flex-wrap:wrap;
+	.room-block{
+		position:relative;
+		width:25vw;
+		background:$primary-gray;
+		margin-bottom:60px;
+		box-shadow:2px 2px 9px rgba($black, 0.18);
+		height:calc(25vw*0.93 + 70px);
+		cursor:pointer;
+		img{
+			height:calc(25vw * 0.93);
+			min-width:25vw;
+			min-height:calc(25vw * 0.93);
+			-webkit-clip-path:polygon(0% 0%, 0% 25vw*0.93,25vw 25vw*0.93,25vw 0%);
+		}
+		.room-info{
+			position:absolute;
+			bottom:0px;
+			height:70px;
+			background:$primary-gray;
+			padding:20px 30px 15px 30px;
+			font-weight:300;
+			width:100%;
+			transition:all 0.5s ease-in-out;
+			-webkit-clip-path:polygon(0% 0%, 0% 70px, 100% 70px,100% 0%);
+		}
+		.price-info{
+			padding:45px 0 0 0;
+			@include flexbox(row, baseline, space-between);
+		}
+	  	&:hover{
+			.room-info{
+				height:130px;
+				-webkit-clip-path:polygon(0% 0%, 0% 130px, 100% 130px,100% 0%);
+			}
+		}	
+
+	}
+}

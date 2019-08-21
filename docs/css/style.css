@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400&display=swap&subset=chinese-traditional");
+html {
+	line-height: 1.5;
+	-webkit-text-size-adjust: 100%;
+}
+
+body, html {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+html {
+	overflow-y: hidden;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	text-decoration: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+textarea, input, select {
+	-webkit-appearance: none;
+}
+
+textarea:focus, input:focus, select:focus {
+	outline: none;
+	-webkit-appearance: none;
+}
+
+.btn {
+	display: block;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.social-icon {
+	width: 21.875px;
+	height: 25px;
+	margin-right: 10px;
+}
+
+.social-icon:hover {
+	-webkit-filter: brightness(0.5);
+	        filter: brightness(0.5);
+}
+
+.fb-icon {
+	background-image: url("../images/facebook-square-brands.svg");
+}
+
+.ig-icon {
+	background-image: url("../images/instagram-brands.svg");
+}
+
+.info-icon {
+	width: 19px;
+	height: auto;
+	margin-right: 20px;
+}
+
+.swiper-container {
+	width: 100%;
+	height: 100vh;
+}
+
+.swiper-container .swiper-slide {
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	font-family: 'Noto Sans TC', sans-serif;
+	color: #000000;
+	font-size: 14px;
+	position: relative;
+}
+
+main {
+	position: relative;
+}
+
+h1 {
+	font-size: 2.25em;
+}
+
+h2 {
+	font-size: 1.875em;
+}
+
+h3 {
+	font-size: 1.313em;
+}
+
+h3 span.small {
+	font-size: 0.65em;
+	color: #6D7278;
+}
+
+h4 {
+	font-size: 1em;
+}
+
+.small {
+	font-size: 0.875em;
+	color: #6D7278;
+}
+
+.logo {
+	position: absolute;
+	top: calc(40vh - 163px*0.5);
+	left: calc(50vw - 163px*0.5);
+	z-index: 100;
+}
+
+.logo img {
+	display: block;
+}
+
+.home-info-pane {
+	color: #FFFFFF;
+	position: absolute;
+	z-index: 100;
+	top: calc(40vh + 163px*0.75);
+	left: calc(50vw - 163px*0.5 - 100px);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
+}
+
+.home-info-pane .social-icons {
+	width: 100px;
+	position: relative;
+	padding-right: 20px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+}
+
+.home-info-pane .home-info {
+	position: relative;
+	border-left: 1px solid #FFFFFF;
+	padding-left: 20px;
+}
+
+.home-info-pane .home-info li {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
+	padding-bottom: 15px;
+}
+
+.home-info-pane .home-info li a {
+	font-weight: 300;
+}
+
+.home-info-pane .home-info li a:link, .home-info-pane .home-info li a:visited, .home-info-pane .home-info li a:active {
+	color: #FFFFFF;
+}
+
+.home-info-pane .home-info li a:hover {
+	color: #575757;
+}
+
+section {
+	position: absolute;
+	z-index: 200;
+	margin-top: -10vh;
+}
+
+.rooms-pane {
+	width: 80vw;
+	margin-left: 10vw;
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+
+.rooms-pane .room-block {
+	position: relative;
+	width: 25vw;
+	background: #F7F7F7;
+	margin-bottom: 60px;
+	-webkit-box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.18);
+	        box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.18);
+	height: calc(25vw*0.93 + 70px);
+	cursor: pointer;
+}
+
+.rooms-pane .room-block img {
+	height: calc(25vw * 0.93);
+	min-width: 25vw;
+	min-height: calc(25vw * 0.93);
+	-webkit-clip-path: polygon(0% 0%, 0% 23.25vw, 25vw 23.25vw, 25vw 0%);
+}
+
+.rooms-pane .room-block .room-info {
+	position: absolute;
+	bottom: 0px;
+	height: 70px;
+	background: #F7F7F7;
+	padding: 20px 30px 15px 30px;
+	font-weight: 300;
+	width: 100%;
+	-webkit-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	-webkit-clip-path: polygon(0% 0%, 0% 70px, 100% 70px, 100% 0%);
+}
+
+.rooms-pane .room-block .price-info {
+	padding: 45px 0 0 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-align: baseline;
+	    -ms-flex-align: baseline;
+	        align-items: baseline;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+.rooms-pane .room-block:hover .room-info {
+	height: 130px;
+	-webkit-clip-path: polygon(0% 0%, 0% 130px, 100% 130px, 100% 0%);
+}
+
+/*# sourceMappingURL=style.css.map */
