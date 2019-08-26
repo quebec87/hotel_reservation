@@ -168,10 +168,10 @@ function renderRoomPage() {
 
 $(document).ready(function() {
     console.log(window.location)
-    if (window.location.pathname == "/") {
+    if (window.location.pathname == "/hotel_reservation/") {
         getHomeData();
     }
-    if (window.location.pathname == '/room.html') {
+    if (window.location.pathname == '/hotel_reservation//room.html') {
         let currentid = window.location.search.substr(1);
         getRoomData(currentid);
     }
