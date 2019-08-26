@@ -172,7 +172,7 @@ $(document).ready(function() {
         console.log('gethomedata');
         getHomeData();
     }
-    if (window.location.pathname == '/hotel_reservation//room.html') {
+    if (window.location.pathname == '/hotel_reservation/room.html') {
         let currentid = window.location.search.substr(1);
         getRoomData(currentid);
     }
