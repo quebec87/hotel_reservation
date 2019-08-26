@@ -502,8 +502,27 @@ section {
 	margin-top: 8vh;
 }
 
+@media all and (min-width: 600px) and (max-width: 960px) {
+	.selected-room-pane {
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+	}
+}
+
 .selected-room-pane_left {
 	width: 50%;
+}
+
+@media all and (min-width: 600px) and (max-width: 960px) {
+	.selected-room-pane_left {
+		width: 100%;
+	}
+}
+
+@media all and (max-width: 600px) {
+	.selected-room-pane_left {
+		width: 100%;
+	}
 }
 
 .selected-room-pane_left .room-name {
@@ -606,6 +625,20 @@ section {
 	margin-bottom: 20px;
 }
 
+@media all and (min-width: 600px) and (max-width: 960px) {
+	.selected-room-pane_middle {
+		width: 100%;
+		text-align: left;
+	}
+}
+
+@media all and (max-width: 600px) {
+	.selected-room-pane_middle {
+		width: 100%;
+		text-align: left;
+	}
+}
+
 .selected-room-pane_right {
 	width: 35%;
 }
@@ -677,6 +710,24 @@ section {
 
 .selected-room-pane_right #datepicker .ui-state-active {
 	color: #000000;
+}
+
+@media all and (min-width: 600px) and (max-width: 960px) {
+	.selected-room-pane_right {
+		width: 100%;
+	}
+	.selected-room-pane_right #datepicker {
+		margin: 0;
+	}
+}
+
+@media all and (max-width: 600px) {
+	.selected-room-pane_right {
+		width: 100%;
+	}
+	.selected-room-pane_right #datepicker {
+		margin: 0;
+	}
 }
 
 /*# sourceMappingURL=style.css.map */

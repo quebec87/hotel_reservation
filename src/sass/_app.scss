@@ -222,8 +222,17 @@ section{
 	margin-left:5vw;
 	@include flexbox(row, flex-start, space-between);
 	margin-top:8vh;
+	@include pad-width{
+		flex-wrap:wrap;
+	}
 	&_left{
 		width:50%;
+		@include pad-width{
+			width:100%;
+		}
+		@include mobile-width{
+			width:100%;
+		}
 		.room-name{
 			padding-bottom:15px;
 		}
@@ -276,9 +285,17 @@ section{
 		p.small{
 			margin-bottom:20px;
 		}
+		@include pad-width{
+			width:100%;
+			text-align:left;
+		}
+		@include mobile-width{
+			width:100%;
+			text-align:left;
+		}
 	}
 	&_right{
-		width:35%;
+		width:35%;		
 		#datepicker{
 			margin:0 0 0 3vw;
 			.ui-widget{
@@ -338,6 +355,21 @@ section{
 				color:$black;
 			}
 		}
+		@include pad-width{
+			width:100%;
+			#datepicker{
+				margin:0;
+			}
+		}
+		@include mobile-width{
+			width:100%;
+			#datepicker{
+				margin:0;
+			}
+		}
 	}
+
+
+	
 }
 
