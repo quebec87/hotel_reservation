@@ -109,6 +109,14 @@ textarea:focus, input:focus, select:focus {
 	margin-right: 20px;
 }
 
+.wifi-icon {
+	background-image: url("../images/wifi.svg");
+}
+
+.phone-icon {
+	background-image: url("../images/phone.svg");
+}
+
 .swiper-container {
 	width: 100%;
 	height: 100vh;
@@ -138,6 +146,15 @@ body {
 
 main {
 	position: relative;
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: all 0.5s linear;
+	transition: all 0.5s linear;
+}
+
+main.show {
+	visibility: visible;
+	opacity: 1;
 }
 
 h1 {
@@ -171,10 +188,46 @@ h4 {
 	top: calc(40vh - 163px*0.5);
 	left: calc(50vw - 163px*0.5);
 	z-index: 100;
+	-webkit-animation: logo-preloader 2s linear infinite;
+	        animation: logo-preloader 2s linear infinite;
 }
 
 .logo img {
 	display: block;
+}
+
+.logo.loaded {
+	-webkit-animation: none;
+	        animation: none;
+}
+
+.logo_small {
+	position: absolute;
+	top: 3vh;
+	left: 3vh;
+	z-index: 100;
+}
+
+@-webkit-keyframes logo-preloader {
+	0%, 100% {
+		-webkit-filter: invert(1);
+		        filter: invert(1);
+	}
+	50% {
+		-webkit-filter: invert(0);
+		        filter: invert(0);
+	}
+}
+
+@keyframes logo-preloader {
+	0%, 100% {
+		-webkit-filter: invert(1);
+		        filter: invert(1);
+	}
+	50% {
+		-webkit-filter: invert(0);
+		        filter: invert(0);
+	}
 }
 
 .home-info-pane {
@@ -282,12 +335,16 @@ section {
 .rooms-pane .room-block {
 	position: relative;
 	width: 25vw;
+	height: calc(25vw*0.93 + 70px);
 	background: #F7F7F7;
 	margin-bottom: 60px;
 	-webkit-box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.18);
 	        box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.18);
-	height: calc(25vw*0.93 + 70px);
 	cursor: pointer;
+}
+
+.rooms-pane .room-block a, .rooms-pane .room-block a:link, .rooms-pane .room-block a:visited, .rooms-pane .room-block a:hover, .rooms-pane .room-block a:active {
+	color: #000000;
 }
 
 .rooms-pane .room-block img {
@@ -297,12 +354,38 @@ section {
 	-webkit-clip-path: polygon(0% 0%, 0% 23.25vw, 25vw 23.25vw, 25vw 0%);
 }
 
+@media all and (min-width: 600px) and (max-width: 960px) {
+	.rooms-pane .room-block {
+		width: 39vw;
+		height: calc(39vw*0.93 + 70px);
+	}
+	.rooms-pane .room-block img {
+		height: calc(39vw * 0.93);
+		min-width: 39vw;
+		min-height: calc(39vw * 0.93);
+		-webkit-clip-path: polygon(0% 0%, 0% 36.27vw, 39vw 36.27vw, 39vw 0%);
+	}
+}
+
+@media all and (max-width: 600px) {
+	.rooms-pane .room-block {
+		width: 80vw;
+		height: calc(80vw*0.93 + 70px);
+	}
+	.rooms-pane .room-block img {
+		height: calc(80vw * 0.93);
+		min-width: 80vw;
+		min-height: calc(80vw * 0.93);
+		-webkit-clip-path: polygon(0% 0%, 0% 74.4vw, 80vw 74.4vw, 80vw 0%);
+	}
+}
+
 .rooms-pane .room-block .room-info {
 	position: absolute;
-	bottom: 0px;
+	bottom: 0;
 	height: 70px;
 	background: #F7F7F7;
-	padding: 20px 30px 15px 30px;
+	padding: 20px 2vw 15px 2vw;
 	font-weight: 300;
 	width: 100%;
 	-webkit-transition: all 0.5s ease-in-out;
@@ -311,7 +394,7 @@ section {
 }
 
 .rooms-pane .room-block .price-info {
-	padding: 45px 0 0 0;
+	padding: 50px 0 0 0;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -330,6 +413,270 @@ section {
 .rooms-pane .room-block:hover .room-info {
 	height: 130px;
 	-webkit-clip-path: polygon(0% 0%, 0% 130px, 100% 130px, 100% 0%);
+}
+
+.photo-grid {
+	width: 100vw;
+	height: 80vh;
+	-webkit-box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.18);
+	        box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.18);
+}
+
+.photo-grid .grid-item {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+.photo-grid .grid-item a {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.photo-grid .row {
+	height: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
+}
+
+.photo-grid .row .row-item70 {
+	width: 70%;
+	height: 100%;
+}
+
+.photo-grid .row .row-item30 {
+	width: 30%;
+	height: 100%;
+}
+
+.photo-grid .row .column {
+	height: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
+}
+
+.photo-grid .row .column .column-item {
+	width: 100%;
+	height: 50%;
+}
+
+.selected-room-pane {
+	width: 90vw;
+	margin-left: 5vw;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	margin-top: 8vh;
+}
+
+.selected-room-pane_left {
+	width: 50%;
+}
+
+.selected-room-pane_left .room-name {
+	padding-bottom: 15px;
+}
+
+.selected-room-pane_left .room-basic {
+	font-weight: 300;
+	line-height: 2.5;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.selected-room-pane_left .room-basic .description {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	line-height: 2;
+}
+
+.selected-room-pane_left .check-in-out {
+	font-weight: 300;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
+}
+
+.selected-room-pane_left .check-in-out div {
+	width: 50%;
+}
+
+.selected-room-pane_left .amenities {
+	background-color: #F0F0F0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	margin-bottom: 30px;
+}
+
+.selected-room-pane_left .amenities li {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
+	font-weight: 300;
+	width: 30%;
+	padding: 15px;
+	opacity: 0.2;
+}
+
+.selected-room-pane_left .amenities li.yes {
+	opacity: 1;
+}
+
+.selected-room-pane_left .amenities li img {
+	width: 22px;
+	margin-right: 5px;
+}
+
+.selected-room-pane_middle {
+	width: 15%;
+	font-weight: 300;
+	text-align: right;
+	line-height: 2;
+}
+
+.selected-room-pane_middle p.small {
+	margin-bottom: 20px;
+}
+
+.selected-room-pane_right {
+	width: 35%;
+}
+
+.selected-room-pane_right #datepicker {
+	margin: 0 0 0 3vw;
+}
+
+.selected-room-pane_right #datepicker .ui-widget {
+	font-family: 'Noto Sans TC', sans-serif;
+}
+
+.selected-room-pane_right #datepicker .ui-datepicker {
+	width: 100%;
+}
+
+.selected-room-pane_right #datepicker .ui-widget-content {
+	border: none;
+	background-color: #F7F7F7;
+	-webkit-box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.18);
+	        box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.18);
+}
+
+.selected-room-pane_right #datepicker .ui-corner-all {
+	border-radius: 0;
+}
+
+.selected-room-pane_right #datepicker .ui-corner-all:hover {
+	border: none;
+	background-color: #F7F7F7;
+}
+
+.selected-room-pane_right #datepicker .ui-widget-header {
+	border: none;
+	background-color: transparent;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 18px;
+}
+
+.selected-room-pane_right #datepicker .ui-widget-header .ui-icon {
+	width: 24px;
+	height: 24px;
+}
+
+.selected-room-pane_right #datepicker .ui-icon-circle-triangle-w {
+	background-image: url("../images/back.svg");
+	background-position: 0 0;
+}
+
+.selected-room-pane_right #datepicker .ui-icon-circle-triangle-e {
+	background-image: url("../images/next.svg");
+	background-position: 0 0;
+}
+
+.selected-room-pane_right #datepicker .ui-datepicker-calendar th span {
+	color: #6D7278;
+}
+
+.selected-room-pane_right #datepicker .ui-datepicker-calendar td a, .selected-room-pane_right #datepicker .ui-datepicker-calendar td span {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.selected-room-pane_right #datepicker .ui-state-default, .selected-room-pane_right #datepicker .ui-state-disabled {
+	border: none;
+	background: transparent;
+}
+
+.selected-room-pane_right #datepicker .ui-state-active {
+	color: #000000;
 }
 
 /*# sourceMappingURL=style.css.map */

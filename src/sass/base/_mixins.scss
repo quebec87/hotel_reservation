@@ -4,3 +4,15 @@
   align-items: $_align;
   justify-content: $_justify;
 }
+
+@mixin pad-width(){	
+	    @media all and (min-width:$mobile-media) and (max-width:$pad-media){
+	     	@content;
+	    }
+	}
+
+@mixin mobile-width(){	
+	    @media all and (max-width:$mobile-media){
+	     	@content;
+	    }
+	}	

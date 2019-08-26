@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <title>Hotel Reservation</title>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/lightbox.min.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="logo_small"><a href="/"><img src="images/logo_block.svg"/></a></div>	
+<main>
+	<div class="photo-grid">
+		<div class="row">
+		</div>
+	</div>
+	<div class="selected-room-pane">
+		<div class="selected-room-pane_left">
+			<h1 class="room-name"></h1>
+			<ul class="room-basic">
+				<li>房客人數限制：<span class="guest-limit"></span>人</li>
+				<li>床型：<span class="bed-type"></span></li>
+				<li>衛浴數量：<span class="bath"></span>間</li>
+				<li>房間大小：<span class="room-size"></span>平方公尺</li>
+				<li class="small description"></li>
+			</ul>
+			<div class="check-in-out">
+				<div><span class="small">Check In</span><h3 class="check-in"></h3></div>
+				<div><span class="small">Check Out</span><h3 class="check-out"></h3></div>
+			</div>
+			<ul class="amenities">
+				<li id="Wi-Fi"><img src="images/wifi.svg"/>Wi-Fi</li>
+			    <li id="Television"><img src="images/tv.svg"/>電視</li>
+			    <li id="Great-View"><img src="images/mountain-range.svg"/>漂亮的視野</li>
+			    <li id="Breakfast"><img src="images/breakfast.svg"/>早餐</li>
+			    <li id="Air-Conditioner"><img src="images/breeze.svg"/>空調</li>
+			    <li id="Smoke-Free"><img src="images/no-smoke-symbol.svg"/>禁止吸煙</li>
+			    <li id="Mini-Bar"><img src="images/bar.svg"/>Mini Bar</li>
+			    <li id="Refrigerator"><img src="images/fridge.svg"/>冰箱</li>
+			    <li id="Child-Friendly"><img src="images/crawling-baby-silhouette.svg"/>適合兒童</li>
+			    <li id="Room-Service"><img src="images/room_service.svg"/>Room service</li>
+			    <li id="Sofa"><img src="images/sofa.svg"/>沙發</li>
+			    <li id="Pet-Friendly"><img src="images/dog.svg"/>寵物攜帶</li>	
+			</ul>
+		</div>
+		<div class="selected-room-pane_middle">
+			<h2>NT.<span class="normal-price"></span></h2>
+			<p class="small">平日(一~四)</p>
+			<p>NT.<span  class="holiday-price"></span></p>
+			<p class="small">假日(五~日)</p>
+		</div>
+		<div class="selected-room-pane_right">
+			<div id="datepicker"></div>
+		</div>
+	</div>
+</main>
+
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="all-min.js"></script>
+</script>
+</body>
+</html>
