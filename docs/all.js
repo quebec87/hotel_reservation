@@ -348,11 +348,9 @@ function renderRoomPage() {
 
 $(document).ready(function() {
     console.log(window.location)
-    if (window.location.pathname == "/hotel_reservation/") {
-        console.log('gethomedata');
+    if (window.location.pathname.indexOf('room.html') == -1) {
         getHomeData();
-    }
-    if (window.location.pathname == '/hotel_reservation/room.html') {
+    } else {
         let currentid = window.location.search.substr(1);
         getRoomData(currentid);
     }
