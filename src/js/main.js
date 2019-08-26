@@ -169,6 +169,7 @@ function renderRoomPage() {
 $(document).ready(function() {
     console.log(window.location)
     if (window.location.pathname == "/hotel_reservation/") {
+        console.log('gethomedata');
         getHomeData();
     }
     if (window.location.pathname == '/hotel_reservation//room.html') {
