@@ -1,0 +1,14 @@
+.lb-closeContainer{
+	display:none;
+}
+.lightbox .lb-image{
+	border-radius:0;
+	border:none;
+}
+.lb-nav a.lb-prev {
+	background: url(../images/prev.svg) left 48% no-repeat;
+    
+}
+.lb-nav a.lb-next{
+    background: url(../images/next.svg) right 48% no-repeat;
+} 

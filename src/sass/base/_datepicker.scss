@@ -1,0 +1,47 @@
+#datepicker .datepicker{
+	width:100%;
+	.datepicker--nav, .datepicker--day-name{
+		font-size:1.2em;
+	}
+}
+.form-item .datepicker{
+	width:60%;
+	margin-left:30%;
+	position:absolute;
+	.datepicker--nav, .datepicker--day-name{
+		font-size:1em;
+	}	
+}
+
+.datepicker{
+		background-color:$primary-gray;
+		border:none;
+		border-radius:0;
+		box-shadow:2px 2px 9px rgba($black, 0.18);
+		padding:3%;
+		font-family: 'Noto Sans TC', sans-serif;
+		font-weight:200;	
+	}
+	.datepicker--nav{
+		padding:2%;
+		border-bottom:none;
+		color:$black;
+		font-weight:400;
+		
+		i{
+			color:$black;
+		}
+	}
+	.datepicker--nav-action path{
+		stroke:$black;
+		stroke-width:1px;
+	}
+	.datepicker--day-name{
+		color:$small-light-gray;
+		font-weight:400;
+	}
+	.datepicker--cell.-selected-, .datepicker--cell.-selected-.-current-,.datepicker--cell.-in-range-{
+		color:$black;
+		background-color:$dark-gray;
+		background-image: repeating-linear-gradient(60deg, hsla(0,0%,100%,1), hsla(0,0%,100%,0.9) 5px, transparent 0, transparent 6px); 
+	}
