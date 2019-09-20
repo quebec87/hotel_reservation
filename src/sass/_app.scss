@@ -225,6 +225,9 @@ section{
 	@include pad-width{
 		flex-wrap:wrap;
 	}
+	@include mobile-width{
+		flex-wrap:wrap;
+	}
 	&_left{
 		width:50%;
 		@include pad-width{
@@ -312,7 +315,6 @@ section{
 			}
 		}
 	}
-	
 }
 .reservation-pane{
 	display:none;

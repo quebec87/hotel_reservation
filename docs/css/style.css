@@ -219,7 +219,7 @@ textarea:focus, input:focus, select:focus {
 }
 
 #datepicker .datepicker {
-	width: 100%;
+	width: 94%;
 }
 
 #datepicker .datepicker .datepicker--nav, #datepicker .datepicker .datepicker--day-name {
@@ -640,6 +640,13 @@ section {
 }
 
 @media all and (min-width: 600px) and (max-width: 960px) {
+	.selected-room-pane {
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+	}
+}
+
+@media all and (max-width: 600px) {
 	.selected-room-pane {
 		-ms-flex-wrap: wrap;
 		    flex-wrap: wrap;
