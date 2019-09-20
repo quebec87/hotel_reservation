@@ -4,9 +4,8 @@
   <title>Hotel Reservation</title>
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/lightbox.min.css">
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">  
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/plugins.css"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
 </head>
 <body>
 <div class="logo_small"><a href="index.html"><img src="images/logo_block.svg"/></a></div>	
@@ -52,6 +51,42 @@
 		</div>
 		<div class="selected-room-pane_right">
 			<div id="datepicker"></div>
+			<a class="btn reservation-btn">預約時段<span class="reservation-btn_shadow"></span></a>
+		</div>
+	</div>
+	<div class="reservation-pane">
+		<div class="reservation-pane_content">
+			<h2>預約時段</h2>
+			<form class="reservation-form" data-parsley-validate>
+				<div class="form-item">
+					<label for="name">姓名</label>
+					<input id="name" type="text" required></input>
+				</div>
+				<div class="form-item">
+					<label for="phone">電話</label>
+					<input id="phone" type="tel" required></input>
+				</div>
+				<div class="form-item">
+					<label for="res-date">預約起迄</label>
+					<input type="text" id="res-date" required ><a class="reset-date-icon btn"></a></input>
+					<!-- <div class="overlay-datepicker"></div> -->
+				</div>
+			</form>
+			<ul class="calc-date">
+				<li><p>平日時段</p><p><span class="calc-normal">1</span>夜</p></li>
+				<li><p>假日時段</p><p><span class="calc-weekend">1</span>夜</p></li>	
+			</ul>
+			<h2 class="calc-price"> = NT. <span class="calc-price_number">2850</span></h2>
+			<ul class="form-btns">
+				<a class="cancel-btn btn">取消</a>
+				<a class="submit-btn btn">確定預約</a>
+			</ul>
+		</div>
+		<div class="reservation-pane_response">
+			<h2>預約成功</h2>
+			<p class="message"></p>
+			<image src="images/tick-inside-circle.svg"/>
+			<a class="back-btn btn">返回</a>
 		</div>
 	</div>
 </main>

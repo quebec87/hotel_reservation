@@ -6,6 +6,7 @@ const postcss = require('gulp-postcss');
 const sourcemaps = require('gulp-sourcemaps');
 const concat = require('gulp-concat');
 const minify = require('gulp-minify');
+const cleanCSS = require('gulp-clean-css');
 
 const _publicpos = 'docs/'
 
@@ -28,6 +29,15 @@ function style(done) {
         .pipe(sourcemaps.write(''))
         .pipe(gulp.dest(_publicpos + 'css'))
         .pipe(browserSync.stream());
+    done();
+}
+
+
+function compressCss(done) {
+    gulp.src('src/css/*.css')
+        .pipe(concat('plugins.css'))
+        .pipe(cleanCSS())
+        .pipe(gulp.dest(_publicpos + 'css'));
     done();
 }
 
@@ -62,6 +72,7 @@ function watch(cb) {
     //         gulpMultiProcess(['style'], function() {})
     //     })
     gulp.watch('src/sass/**/*', style);
+    gulp.watch('src/css/*', compressCss);
     gulp.watch('src/js/*.js', compressJS);
     gulp.watch('src/js/*.js').on('change', browserSync.reload);
     gulp.watch(_publicpos + '*.html').on('change', browserSync.reload);
@@ -70,5 +81,5 @@ function watch(cb) {
 
 
 
-var build = gulp.series(style, compressJS, watch);
+var build = gulp.series(style, compressCss, compressJS, watch);
 gulp.task('default', build);
